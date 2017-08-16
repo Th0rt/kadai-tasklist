@@ -12,6 +12,7 @@
 
   <%= f.label :content, "タスク名" %>
   <%= f.text_field :content %>
+  <%= f.select :status, ["未着手", "進行中", "保留", "完了"] %>
   <%= f.submit "投稿" %>
   
 <% end %>
