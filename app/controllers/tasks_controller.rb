@@ -29,7 +29,7 @@ class TasksController < ApplicationController
   end
   
   def update
-    @task = Task.update(params[:id])
+    @task = Task.find(params[:id])
     
     if @task.update(task_params)
       flash[:success] = "タスクを編集しました"
