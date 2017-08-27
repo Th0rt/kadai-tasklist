@@ -13,7 +13,7 @@ class TasksController < ApplicationController
   end
   
   def create
-    @task = Task.new(task_params)
+    @task = current_user.tasks.build(task_params)
     
     if @task.save
       flash[:success] = "タスクを作成しました"
